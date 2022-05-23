@@ -47,6 +47,21 @@ const createTodo = (title, dueDate) => {
   saveToDos();
 };
 
+// Deletes a todo
+const removeTodo = (idToDelete) => {
+  todos = todos.filter((todo) => {
+    // If the id of this todo matches idToDelete, return false
+    // For everything else, return true
+    if (todo.id === idToDelete) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  saveToDos();
+};
+
 // parses array to string and saves to local storage
 const saveToDos = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
