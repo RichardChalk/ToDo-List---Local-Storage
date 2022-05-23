@@ -43,6 +43,10 @@ const createTodo = (title, dueDate) => {
   saveToDos();
 };
 
+const saveToDos = () => {
+  localStorage.setItem("todos", JSON.stringify(todos));
+};
+
 // Controller - Controller - Controller - Controller - Controller
 // Controller - Controller - Controller - Controller - Controller
 // Controller - Controller - Controller - Controller - Controller
