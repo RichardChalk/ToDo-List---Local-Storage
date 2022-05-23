@@ -31,6 +31,18 @@ if (Array.isArray(savedToDos)) {
   ];
 }
 
+const createTodo = (title, dueDate) => {
+  const id = "" + new Date().getTime();
+
+  todos.push({
+    title: title,
+    dueDate: dueDate,
+    id: id,
+  });
+
+  saveToDos();
+};
+
 // Controller - Controller - Controller - Controller - Controller
 // Controller - Controller - Controller - Controller - Controller
 // Controller - Controller - Controller - Controller - Controller
