@@ -81,6 +81,13 @@ const render = () => {
     const element = document.createElement("div");
     element.innerText = todo.title + " (" + todo.dueDate + ")";
 
+    // Add delete functionality
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.onclick = deleteToDo;
+    deleteButton.id = todo.id;
+    element.appendChild(deleteButton);
+
     const todoList = document.getElementById("todo-list");
     todoList.appendChild(element);
   });
