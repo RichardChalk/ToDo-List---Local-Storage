@@ -8,6 +8,10 @@
 let todos;
 
 // Collect from local storage (parse string to array)
+
+// If you wish to empty local storage run this command
+// localStorage.clear();
+
 const savedToDos = JSON.parse(localStorage.getItem("todos"));
 if (Array.isArray(savedToDos)) {
   todos = savedToDos;
@@ -16,17 +20,17 @@ if (Array.isArray(savedToDos)) {
     {
       title: "Todo example #1",
       dueDate: "2022-08-21",
-      id: ex1,
+      id: "ex1",
     },
     {
       title: "Todo example #2",
       dueDate: "2022-09-28",
-      id: ex2,
+      id: "ex2",
     },
     {
       title: "Todo example #3",
       dueDate: "2022-11-11",
-      id: ex3,
+      id: "ex3",
     },
   ];
 }
@@ -80,6 +84,7 @@ const render = () => {
     const todoList = document.getElementById("todo-list");
     todoList.appendChild(element);
   });
-
-  render();
 };
+
+// Called to display todo list in html
+render();
