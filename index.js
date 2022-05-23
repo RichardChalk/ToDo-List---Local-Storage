@@ -7,6 +7,27 @@
 // Otherwise use demo array
 let todos;
 
+// Collect from local storage
+const savedToDos = JSON.parse(localStorage.getItem("todos"));
+if (Array.isArray(savedToDos)) {
+  todos = savedToDos;
+} else {
+  todos = [
+    {
+      title: "Todo example #1",
+      dueDate: "2022-08-21",
+    },
+    {
+      title: "Todo example #2",
+      dueDate: "2022-09-28",
+    },
+    {
+      title: "Todo example #3",
+      dueDate: "2022-11-11",
+    },
+  ];
+}
+
 // Controller - Controller - Controller - Controller - Controller
 // Controller - Controller - Controller - Controller - Controller
 // Controller - Controller - Controller - Controller - Controller
