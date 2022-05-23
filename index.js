@@ -16,14 +16,17 @@ if (Array.isArray(savedToDos)) {
     {
       title: "Todo example #1",
       dueDate: "2022-08-21",
+      id: ex1,
     },
     {
       title: "Todo example #2",
       dueDate: "2022-09-28",
+      id: ex2,
     },
     {
       title: "Todo example #3",
       dueDate: "2022-11-11",
+      id: ex3,
     },
   ];
 }
