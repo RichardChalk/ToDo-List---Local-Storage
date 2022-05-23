@@ -106,7 +106,8 @@ const render = () => {
 
     // Add delete functionality
     const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
+    deleteButton.innerHTML = '<i class="bi bi-trash3"></i>';
+    deleteButton.classList = "btn btn-danger";
     deleteButton.onclick = deleteToDo;
     deleteButton.id = todo.id;
     element.appendChild(deleteButton);
