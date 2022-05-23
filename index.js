@@ -7,7 +7,7 @@
 // Otherwise use demo array
 let todos;
 
-// Collect from local storage
+// Collect from local storage (parse string to array)
 const savedToDos = JSON.parse(localStorage.getItem("todos"));
 if (Array.isArray(savedToDos)) {
   todos = savedToDos;
@@ -43,6 +43,7 @@ const createTodo = (title, dueDate) => {
   saveToDos();
 };
 
+// parses array to string and saves to local storage
 const saveToDos = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
 };
@@ -60,5 +61,25 @@ const addTodo = () => {
   const dueDate = datePicker.value;
 
   createToDo(title, dueDate);
+  render();
+};
+
+// View - View - View - View - View - View - View - View - View - View
+// View - View - View - View - View - View - View - View - View - View
+// View - View - View - View - View - View - View - View - View - View
+// View - View - View - View - View - View - View - View - View - View
+
+const render = () => {
+  // empty the list
+  document.getElementById("todo-list").innerHTML = "";
+
+  todos.forEach((todo) => {
+    const element = document.createElement("div");
+    element.innerText = todo.title + " (" + todo.dueDate + ")";
+
+    const todoList = document.getElementById("todo-list");
+    todoList.appendChild(element);
+  });
+
   render();
 };
