@@ -64,7 +64,7 @@ const addTodo = () => {
   const datePicker = document.getElementById("date-picker");
   const dueDate = datePicker.value;
 
-  createToDo(title, dueDate);
+  createTodo(title, dueDate);
   render();
 };
 
