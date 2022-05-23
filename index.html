@@ -24,7 +24,13 @@
   </head>
 
   <body>
-    <h1>Test <i class="bi bi-file-earmark-plus"></i></h1>
+    <input id="todo-title" type="text" />
+    <input id="date-picker" type="date" />
+    <button onclick="addTodo()" class="btn btn-success">
+      <i class="bi bi-file-earmark-plus"></i>
+    </button>
+
+    <div id="todo-list"></div>
 
     <script src="index.js"></script>
 
