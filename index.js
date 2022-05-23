@@ -68,6 +68,14 @@ const addTodo = () => {
   render();
 };
 
+const deleteToDo = (event) => {
+  const deleteButton = event.target;
+  const idToDelete = deleteButton.id;
+
+  removeTodo(idToDelete);
+  render();
+};
+
 // View - View - View - View - View - View - View - View - View - View
 // View - View - View - View - View - View - View - View - View - View
 // View - View - View - View - View - View - View - View - View - View
